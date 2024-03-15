@@ -2,7 +2,6 @@ import { Moon, Sun } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import React from "react";
 import { useTheme } from "@/context/theme-provider";
 
 const Navbar = () => {

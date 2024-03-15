@@ -8,7 +8,10 @@ interface Props {
 const NewsCard = (props: Props) => {
   const { journalis, data } = props;
   return (
-    <div className="flex flex-col gap-1">
+    <div
+      className="flex flex-col gap-1 cursor-pointer"
+      onClick={() => window.open(data.url, "_blank")}
+    >
       <img src={data.urlToImage} />
       <label className=" text-2xl">{data.title}</label>
       <p className=" text-sm text-justify">{data.description}</p>
@@ -19,7 +22,7 @@ const NewsCard = (props: Props) => {
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
           <div className="flex flex-col">
-            <label className=" text-sm">Wonu</label>
+            <label className=" text-sm">{data.author}</label>
             <p className=" text-xs">Newsman</p>
           </div>
         </div>
